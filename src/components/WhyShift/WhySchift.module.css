@@ -1,0 +1,405 @@
+
+/* ========================================
+   SECTION
+======================================== */
+
+.WhySchift {
+  --card-gap: 28px;
+  --card-radius: 16px;
+  --small-card-height: 294px;
+  --card-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  width: 100%;
+  padding: 132px 4.6% 110px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-color: var(--color-background-warm-paper);
+}
+
+/* ========================================
+   INTRO
+======================================== */
+
+.whySchiftFirstContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.firstContainersBlock {
+  min-width: 0;
+}
+
+.blockTextWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.isDot {
+  display: block;
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background-color: var(--color-primary-signal-orange);
+}
+
+.blockText,
+.headerText,
+.scaleLabel {
+  margin: 0;
+
+  font-family: var(--inter-font);
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+
+  color: var(--color-text-graphite);
+}
+
+.blockText {
+  font-weight: 500;
+}
+
+.firstContainerHeaderline {
+  max-width: 550px;
+  margin: 0;
+
+  font-family: var(--archivo-black-font);
+  font-size: clamp(54px, 5.45vw, 84px);
+  font-weight: 900;
+  line-height: 0.97;
+  letter-spacing: -0.075em;
+
+  color: var(--color-text-graphite);
+}
+
+.seconContainerBlock {
+  flex: 0 1 460px;
+  min-width: 0;
+  padding-bottom: 12px;
+}
+
+.seconBlockText {
+  margin: 0;
+
+  font-family: var(--inter-font);
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: var(--color-text-muted);
+}
+
+/* ========================================
+   CARDS LAYOUT
+======================================== */
+
+.bunchOfCardsContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: var(--card-gap);
+
+  width: 100%;
+  margin-top: 70px;
+}
+
+.whySchiftCardsContainer {
+  min-width: 0;
+  height: 100%;
+}
+
+.twoCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+
+  min-width: 0;
+}
+
+/* ========================================
+   SHARED CARD STYLES
+======================================== */
+
+.cultureCard,
+.presitionCard,
+.scaleCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: var(--card-radius);
+}
+
+.presitionCard,
+.scaleCard {
+  height: var(--small-card-height);
+  padding: 32px;
+}
+
+/* ========================================
+   CULTURE CARD
+======================================== */
+
+.cultureCard {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: calc(
+    var(--small-card-height) * 2 + var(--card-gap)
+  );
+  padding: 40px;
+
+  background-color: #e5dfd5;
+}
+
+.cultureCircle {
+  position: absolute;
+  top: 55px;
+  right: -120px;
+  z-index: 0;
+
+  width: 730px;
+  height: 730px;
+  box-sizing: border-box;
+
+  border: 95px solid var(--color-primary-signal-orange);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.cultureCard .headerText,
+.cultureCard .headerlineContainer,
+.cultureCard .footerText {
+  position: relative;
+  z-index: 1;
+}
+
+.cultureCard .headerText {
+  font-weight: 800;
+}
+
+.cultureCard .headerlineContainer {
+  width: 100%;
+  margin-top: 56px;
+}
+
+.headerlina {
+  max-width: 400px;
+  margin: 0;
+
+  font-family: var(--archivo-black-font);
+  font-size: clamp(48px, 5.4vw, 62px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.075em;
+
+  color: var(--color-text-graphite);
+}
+
+.headerlineContainerText {
+  max-width: 380px;
+  margin: 24px 0 0;
+
+  font-family: var(--inter-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+
+  color: var(--color-text-graphite);
+}
+
+.footerText {
+  position: relative;
+  z-index: 1;
+
+  margin: auto 0 0;
+
+  font-family: var(--inter-font);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1px;
+
+  color: var(--color-text-graphite);
+}
+
+/* ========================================
+   PRECISION CARD
+======================================== */
+
+.presitionCard {
+  background-color: var(--color-text-graphite);
+  color: var(--color-background-warm-paper);
+}
+
+.presitionCardText {
+  position: relative;
+  z-index: 2;
+}
+
+.presitionCard .headerText {
+  font-weight: 500;
+  color: var(--color-background-warm-paper);
+}
+
+.presitionHeaderline,
+.scaleHeaderline {
+  margin: 24px 0 0;
+
+  font-family: var(--archivo-black-font);
+  font-size: clamp(30px, 2.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.065em;
+}
+
+.presitionHeaderline {
+  max-width: 300px;
+  color: var(--color-background-warm-paper);
+}
+
+.presitionCard .footerText {
+  margin: 22px 0 0;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+
+  color: var(--color-background-warm-paper);
+}
+
+/* Chart */
+
+.presitionChart {
+  position: absolute;
+  right: 18px;
+  bottom: 30px;
+  z-index: 3;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+
+  height: 130px;
+  pointer-events: none;
+}
+
+.chartBar {
+  display: block;
+  flex: 0 0 16px;
+
+  width: 16px;
+  min-height: 1px;
+
+  border-radius: 6px 6px 0 0;
+  background-color: var(--color-text-muted-dark);
+}
+
+/* ========================================
+   SCALE CARD
+======================================== */
+
+.scaleCard {
+  background-color: var(--color-primary-signal-orange);
+  color: var(--color-text-graphite);
+}
+
+.scaleCardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.scaleLabel {
+  font-weight: 700;
+}
+
+.scaleHeaderline {
+  color: var(--color-text-graphite);
+}
+
+.scaleDescription {
+  max-width: 370px;
+  margin: 22px 0 0;
+
+  font-family: var(--inter-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--color-text-graphite);
+}
+
+/* Decorative arrow */
+
+.scaleArrow {
+  position: absolute;
+  right: -32px;
+  bottom: -55px;
+  z-index: 1;
+
+  width: 170px;
+  height: 170px;
+
+  fill: none;
+  color: var(--color-text-graphite);
+
+  pointer-events: none;
+}
+
+/* ========================================
+   INTERACTIONS
+======================================== */
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .cultureCard,
+  .presitionCard,
+  .scaleCard {
+    transition:
+      transform 0.4s var(--card-ease),
+      box-shadow 0.4s ease;
+  }
+
+  .cultureCircle {
+    transition: transform 0.7s var(--card-ease);
+  }
+
+  .chartBar {
+    transition: background-color 0.3s ease;
+  }
+
+  .scaleArrow {
+    transition: transform 0.5s var(--card-ease);
+  }
+
+  .cultureCard:hover,
+  .presitionCard:hover,
+  .scaleCard:hover {
+    transform: translateY(-6px) scale(1.018);
+    box-shadow: 0 22px 45px rgba(24, 24, 24, 0.12);
+  }
+
+  .cultureCard:hover .cultureCircle {
+    transform: translate(-12px, -12px) scale(1.025);
+  }
+
+  .presitionCard:hover .chartBar {
+    background-color: var(--color-text-muted);
+  }
+
+  .scaleCard:hover .scaleArrow {
+    transform: translate(10px, -10px);
+  }
+}
+
+

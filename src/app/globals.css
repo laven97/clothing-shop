@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Fonts */
+
+  --inter-font: "Inter", sans-serif;
+  --space-grotesk-font: "Space Grotesk", sans-serif;
+  --archivo-black-font: "Archivo Black", sans-serif;
+
+  /* Colors */
+
+  --color-text-graphite: #121413;
+  --color-background-warm-paper: #f4f2eb;
+  --color-surface: #fffefb;
+  --simple-white:#ffffff;
+
+  --color-primary-signal-orange: #ff6741;
+  --color-sage-soft-sage: #dde5db;
+
+  --color-text-muted: #72736e;
+  --color-text-light: #f5f4eb;
+  --color-text-muted-dark: #b7b9b3;
+
+  --color-footer: #141616;
+  --wivied-yelow: #d9f778;
+  --border-muted: #606765;
+}
